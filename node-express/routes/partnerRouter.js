@@ -15,7 +15,7 @@ partnerRouter.route('/')
 })
 .put((req, res) => {
   res.statusCode = 403;
-  res.end('PUT OPERATION not supported on /partners');
+  res.end('PUT operations not supported on /partners');
 })
 .delete((req, res) => {
   res.end('deleteing all partners');
