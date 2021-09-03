@@ -9,3 +9,4 @@ mongodb/data/journal/WiredTigerPreplog.0000000001
 mongodb/data/WiredTiger
 mongodb/data/WiredTiger.lock
 mongodb/data/WiredTiger.turtle
+mongodb/data/journal/WiredTigerLog.0000000004
