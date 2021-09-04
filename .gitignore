@@ -5,6 +5,7 @@
 *.2021-09-03T11-15-33Z-00000
 *.0000000003
 *.0000000002
+mongodb/
 mongodb/data/journal/WiredTigerPreplog.0000000001
 mongodb/data/WiredTiger
 mongodb/data/WiredTiger.lock
