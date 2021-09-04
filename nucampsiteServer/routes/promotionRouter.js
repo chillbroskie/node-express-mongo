@@ -10,7 +10,6 @@ promotionRouter.route('/')
 .delete(promotionsController.deletePromotion);
 
 
-
 promotionRouter.route('/:promotionId')
 .get(promotionsController.getPromotionId)
 .post(promotionsController.createPromotionId)
