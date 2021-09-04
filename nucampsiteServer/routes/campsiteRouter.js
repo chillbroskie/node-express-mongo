@@ -38,7 +38,7 @@ campsiteRouter.route('/')
 });
 
 
-
+// test
 
 campsiteRouter.route('/:campsiteId')
 .get((req, res, next) => {
