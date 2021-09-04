@@ -11,3 +11,4 @@ mongodb/data/WiredTiger
 mongodb/data/WiredTiger.lock
 mongodb/data/WiredTiger.turtle
 mongodb/data/journal/WiredTigerLog.0000000004
+node_modules/
