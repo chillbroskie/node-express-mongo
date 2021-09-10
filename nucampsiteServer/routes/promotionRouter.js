@@ -1,19 +1,20 @@
 const express = require('express');
 const promotionRouter = express.Router();
 const promotionsController = require("../controllers/promotions");
+const authenticate = require('../authenticate');
 
 
 promotionRouter.route('/')
 .get(promotionsController.getPromotions)
-.post(promotionsController.createPromotion)
-.put(promotionsController.updatePromotion)
-.delete(promotionsController.deletePromotion);
+.post(authenticate.verifyUser, promotionsController.createPromotion)
+.put(authenticate.verifyUser, promotionsController.updatePromotion)
+.delete(authenticate.verifyUser, promotionsController.deletePromotion);
 
 
 promotionRouter.route('/:promotionId')
 .get(promotionsController.getPromotionId)
-.post(promotionsController.createPromotionId)
-.put(promotionsController.updatePromotionId)
-.delete(promotionsController.deletePromotionId);
+.post(authenticate.verifyUser, promotionsController.createPromotionId)
+.put(authenticate.verifyUser, promotionsController.updatePromotionId)
+.delete(authenticate.verifyUser, promotionsController.deletePromotionId);
 
 module.exports = promotionRouter;
