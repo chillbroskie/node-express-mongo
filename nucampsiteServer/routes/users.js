@@ -5,9 +5,18 @@ const passport = require('passport');
 const authenticate = require('../authenticate');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', authenticate.verifyUser, authenticate.verifyAdmin, function(req, res, next) {
+  User.find()
+  .then(user => {
+    console.log('you are authorized');
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.json(user);
+  })
+  .catch(err => next(err))
 });
+
+
 
 router.post('/signup', (req, res) => {
   User.register(
